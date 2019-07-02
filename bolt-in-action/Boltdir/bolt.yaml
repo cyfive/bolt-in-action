@@ -1,0 +1,9 @@
+ssh:
+  host-key-check: false
+  private-key: ~/.ssh/id_rsa
+  user: bolt
+  run-as: root
+  sudo-password: boltpasswd
+#  interpreters:
+#    rb: /home/foo/.rbenv/versions/2.5.1/bin/ruby
+#    py: /usr/bin/python3

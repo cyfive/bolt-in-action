@@ -1,0 +1,10 @@
+---
+version: 2
+
+targets:
+  - name: node_01
+    uri: 192.168.254.10
+  - name: node_02
+    uri: 192.168.254.11
+  - name: node_03
+    uri: 192.168.254.12
