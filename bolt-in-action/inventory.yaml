@@ -1,0 +1,19 @@
+---
+version: 2
+
+config:
+  transport: ssh
+  ssh:
+    host-key-check: false
+    user: bolt
+    run-as: root
+    sudo-password: boltpasswd
+    private-key: ~/.ssh/id_rsa
+
+targets:
+  - name: node_01
+    uri: node-01
+  - name: node_02
+    uri: node-02
+  - name: node_03
+    uri: node-03
