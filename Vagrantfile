@@ -17,28 +17,28 @@ Vagrant.configure("2") do |config|
   config.vm.define "node_01" do |node_01|
     node_01.vm.box = "centos/7"
     node_01.vm.hostname = "node-01"
-    node_01.vm.network "private_network", ip: "192.168.254.10"
+#    node_01.vm.network "private_network", ip: "192.168.254.10"
     node_01.vm.provision "shell", path: "add-bolt-user.sh"
   end
 
   config.vm.define "node_02" do |node_02|
     node_02.vm.box = "centos/7"
     node_02.vm.hostname = "node-02"
-    node_02.vm.network "private_network", ip: "192.168.254.11"
+#    node_02.vm.network "private_network", ip: "192.168.254.11"
     node_02.vm.provision "shell", path: "add-bolt-user.sh"
   end
 
   config.vm.define "node_03" do |node_03|
     node_03.vm.box = "centos/7"
     node_03.vm.hostname = "node-03"
-    node_03.vm.network "private_network", ip: "192.168.254.12"
+#    node_03.vm.network "private_network", ip: "192.168.254.12"
     node_03.vm.provision "shell", path: "add-bolt-user.sh"
   end
 
   config.vm.define "bolt_node" do |bolt_node|
     bolt_node.vm.box = "centos/7"
     bolt_node.vm.hostname = "bolt-node"
-    bolt_node.vm.network "private_network", ip: "192.168.254.13"
+#    bolt_node.vm.network "private_network", ip: "192.168.254.13"
     bolt_node.vm.provision "shell", inline: <<-SHELL
        sudo rpm -Uvh https://yum.puppet.com/puppet6-release-el-7.noarch.rpm
        sudo yum install -y pdk puppet-bolt
